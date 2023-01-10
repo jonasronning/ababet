@@ -25,7 +25,6 @@ export default function NewBet() {
   const [category, setCategory] = React.useState<string>("");
   const [closeDate, setCloseDate] = React.useState<Dayjs | null>(dayjs());
 
-
   const [options, setOptions] = React.useState<NewOptionType[]>([
     { option: "", latest_odds: null },
   ]);
@@ -84,13 +83,13 @@ export default function NewBet() {
       });
 
       const resp = await response.json();
-      if (resp["createBet"]) {
+      if (response.ok) {
         toggleAlert(true, "Bettet ble opprettet!", "success");
         setOptions([{ option: "", latest_odds: null }]);
         setTitle("");
         setCategory("");
       } else {
-        toggleAlert(true, resp["errorMsg"], "error");
+        toggleAlert(true, "Noe gikk galt...", "error");
       }
     }
   }
@@ -186,7 +185,7 @@ export default function NewBet() {
           <br />
           <div>
             Tilbakebetalingsprosent:{" "}
-            {((((totalodds)/options.length)/options.length) * 100).toFixed(1)}%
+            {((totalodds / options.length / options.length) * 100).toFixed(1)}%
           </div>
           <br />
           <Button
