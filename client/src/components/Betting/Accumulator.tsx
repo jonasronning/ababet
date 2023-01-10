@@ -179,6 +179,16 @@ export default function Accumulator() {
                 toggleAlert={toggleAlert}
               ></AlertComp>
               <Button
+                sx={{
+                  color: "#ffffff",
+                  backgroundColor: "#3d4a58",
+                  mt: 2,
+                  mb: 2,
+                  ":hover": {
+                    color: "#ffffff",
+                    backgroundColor: "#636e72",
+                  },
+                }}
                 size="small"
                 variant="contained"
                 onClick={() => {
@@ -251,6 +261,16 @@ export default function Accumulator() {
                 ></Chip>
               </div>
               <Button
+                sx={{
+                  color: "#ffffff",
+                  backgroundColor: "#3d4a58",
+                  mt: 2,
+                  mb: 2,
+                  ":hover": {
+                    color: "#ffffff",
+                    backgroundColor: "#636e72",
+                  },
+                }}
                 disabled={balance < Number(stake) ? true : false}
                 variant="contained"
                 onClick={() => {
