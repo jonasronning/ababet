@@ -57,11 +57,11 @@ export default function AppAppBar() {
   return (
     <div>
       <AppBar position="fixed">
-        {SIZE.width > 1350 ? (
+        {SIZE.width > 970 ? (
           <Toolbar
             sx={{
-              backgroundColor: "#303c6c",
-              color: "#f4976c",
+              backgroundColor: "#3d4a58",
+              color: "white",
               justifyContent: "space-between",
             }}
           >
@@ -73,7 +73,7 @@ export default function AppAppBar() {
                   navigate("/");
                 }}
                 style={{ maxHeight: 30, marginRight: 25, marginTop: 8 }}
-                src={"/laubet_simple.png"}
+                src={"/ababet_simple.png"}
               />
               {/* <IconButton
                 size="large"
@@ -150,7 +150,7 @@ export default function AppAppBar() {
                   Leaderboard
                 </Typography>
               </IconButton>
-              <IconButton
+              {/* <IconButton
                 id="dict-button"
                 size="large"
                 edge="start"
@@ -164,7 +164,7 @@ export default function AppAppBar() {
                 <Typography sx={{ color: "white", marginLeft: 1 }}>
                   Ordboka
                 </Typography>
-              </IconButton>
+              </IconButton> */}
               <IconButton
                 id="feed-button"
                 size="large"
@@ -180,7 +180,7 @@ export default function AppAppBar() {
                   BetFeed
                 </Typography>
               </IconButton>
-              <IconButton
+              {/* <IconButton
                 id="feed-button"
                 size="large"
                 edge="start"
@@ -194,7 +194,7 @@ export default function AppAppBar() {
                 <Typography sx={{ color: "white", marginLeft: 1 }}>
                   Konkurranse!
                 </Typography>
-              </IconButton>
+              </IconButton> */}
             </Box>
             {/* <Box sx={{ flex: 1 }}>
               
@@ -203,7 +203,7 @@ export default function AppAppBar() {
                   navigate("/");
                 }}
                 style={{ maxHeight: 45 }}
-                src={"/laubet_simple.png"}
+                src={"/ababet_simple.png"}
               />
             </Box> */}
             <Box
@@ -227,8 +227,12 @@ export default function AppAppBar() {
                 <Typography sx={{ color: "white", marginRight: 1 }}>
                   {loggedInUser == "" ? (
                     <Chip
-                      icon={<PersonIcon />}
-                      sx={{ backgroundColor: "#303c6c", color: "#f4976c" }}
+                      icon={<PersonIcon sx={{ fill: "white" }} />}
+                      sx={{
+                        ":hover": { cursor: "pointer" },
+                        backgroundColor: "#f90000",
+                        color: "white",
+                      }}
                       label={"Logg inn"}
                     ></Chip>
                   ) : (
@@ -260,8 +264,8 @@ export default function AppAppBar() {
         ) : (
           <Toolbar
             sx={{
-              backgroundColor: "#303c6c",
-              color: "#f4976c",
+              backgroundColor: "#3d4a58",
+              color: "white",
               justifyContent: "space-between",
             }}
           >
@@ -343,7 +347,7 @@ export default function AppAppBar() {
                 </MenuItem>
                 <Divider />
 
-                <MenuItem
+                {/* <MenuItem
                   onClick={() => {
                     setAnchorEl(null);
                     navigate("/dictionary");
@@ -352,7 +356,7 @@ export default function AppAppBar() {
                   <MenuBookIcon sx={{ mr: 1 }} />
                   Ordboka
                 </MenuItem>
-                <Divider />
+                <Divider /> */}
                 <MenuItem
                   onClick={() => {
                     setAnchorEl(null);
@@ -362,7 +366,7 @@ export default function AppAppBar() {
                   <DynamicFeedIcon sx={{ mr: 1 }} />
                   BetFeed
                 </MenuItem>
-                <Divider />
+                {/* <Divider />
                 <MenuItem
                   onClick={() => {
                     setAnchorEl(null);
@@ -371,7 +375,7 @@ export default function AppAppBar() {
                 >
                   <EmojiEventsIcon sx={{ mr: 1 }} />
                   Konkurranse
-                </MenuItem>
+                </MenuItem> */}
               </Menu>
               {/* <IconButton
                 size="large"
@@ -425,7 +429,7 @@ export default function AppAppBar() {
                   navigate("/");
                 }}
                 style={{ maxHeight: 30, marginTop: 5 }}
-                src={"/laubet_simple.png"}
+                src={"/ababet_simple.png"}
               />
             </Box>
             <Box
@@ -442,10 +446,13 @@ export default function AppAppBar() {
                       navigate("/login");
                     }}
                     icon={
-                      <PersonIcon sx={{ ":hover": { cursor: "pointer" } }} />
+                      <PersonIcon
+                        sx={{ ":hover": { cursor: "pointer" }, fill: "white" }}
+                      />
                     }
                     sx={{
-                      backgroundColor: "white",
+                      backgroundColor: "#f90000",
+                      color: "white",
                     }}
                     label={"Logg inn"}
                   ></Chip>

@@ -16,7 +16,7 @@ export default function NavBar() {
       <AppBar
         position="static"
         style={{
-          background: "#1d2528",
+          background: "#3d4a58",
           fontFamily: "Roboto",
         }}
       >
@@ -34,7 +34,7 @@ export default function NavBar() {
             <HomeIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            New Laubet
+            AbaBet
           </Typography>
 
           <IconButton

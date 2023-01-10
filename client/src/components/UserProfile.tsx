@@ -274,21 +274,21 @@ export default function UserProfile() {
                       })}
                       <Chip
                         sx={{
-                          backgroundColor: "#303c6c",
+                          backgroundColor: "#f90000",
                           color: "white",
                           marginRight: 1,
                         }}
                         label={"Innsats: " + accum.stake + "kr"}
                       ></Chip>
                       <Chip
-                        sx={{ backgroundColor: "#303c6c", color: "white" }}
+                        sx={{ backgroundColor: "#f90000", color: "white" }}
                         label={"Totalodds: " + accum.total_odds.toFixed(2)}
                       ></Chip>
                       <br />
                       <Chip
                         sx={{
                           marginTop: 1,
-                          backgroundColor: "#303c6c",
+                          backgroundColor: "#f90000",
                           color: "white",
                         }}
                         label={

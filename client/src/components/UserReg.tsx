@@ -51,9 +51,7 @@ function UserReg() {
   });
 
   const fetchUserAvailability = async (user: string) => {
-    const response = await fetch(
-      `${url_path}api/userAvailability/${user}`
-    );
+    const response = await fetch(`${url_path}api/userAvailability/${user}`);
     const resp = await response.json();
 
     setUserAvailability({ checkedDB: true, userTaken: resp["userTaken"] });
@@ -151,18 +149,18 @@ function UserReg() {
             component={Link}
             to="/login"
             sx={{
-              color: "#1d2528",
+              color: "#3d4a58",
               mt: 2,
               ":hover": {
                 color: "#ffffff",
-                backgroundColor: "#1d2528",
+                backgroundColor: "#3d4a58",
               },
             }}
           >
             <b>Allerede bruker? Klikk her</b>
           </Button>
         </div>
-        <h1>Opprett bruker i LauBet </h1>
+        <h1>Opprett bruker i AbaBet </h1>
         <div className="register-fields">
           <TextField
             InputProps={{
@@ -270,11 +268,11 @@ function UserReg() {
             onClick={() => initCreateUser()}
             sx={{
               color: "#ffffff",
-              backgroundColor: "#1d2528",
+              backgroundColor: "#3d4a58",
               mt: 2,
               ":hover": {
                 color: "#ffffff",
-                backgroundColor: "#1d2528",
+                backgroundColor: "#3d4a58",
               },
             }}
           >

@@ -93,9 +93,9 @@ export default function BettingHome() {
   if (responseCode == undefined) {
     return (
       <>
-      <br />
-      <br />
-      <br />
+        <br />
+        <br />
+        <br />
         <CircularProgress />
       </>
     );
@@ -170,8 +170,8 @@ export default function BettingHome() {
                                   mt: 1,
                                   ":hover": {
                                     color: "#ffffff",
-                                    backgroundColor: "#1d2528",
-                                    borderColor: "#1d2528",
+                                    backgroundColor: "#3d4a58",
+                                    borderColor: "#3d4a58",
                                   },
                                 }}
                               >

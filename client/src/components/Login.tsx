@@ -190,7 +190,7 @@ function Login() {
               onClick={onClickLogOut}
               sx={{
                 color: "#ffffff",
-                backgroundColor: "#1d2528",
+                backgroundColor: "#3d4a58",
                 mt: 2,
                 mb: 2,
                 ":hover": {
@@ -232,7 +232,7 @@ function Login() {
                   onClick={initLogin}
                   sx={{
                     color: "#ffffff",
-                    backgroundColor: "#1d2528",
+                    backgroundColor: "#3d4a58",
                     mt: 2,
                     mb: 2,
                     ":hover": {
@@ -250,11 +250,11 @@ function Login() {
                   component={Link}
                   to="/UserReg"
                   sx={{
-                    color: "#1d2528",
+                    color: "#3d4a58",
                     mt: 2,
                     ":hover": {
                       color: "#ffffff",
-                      backgroundColor: "#1d2528",
+                      backgroundColor: "#3d4a58",
                     },
                   }}
                 >

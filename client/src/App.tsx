@@ -41,13 +41,13 @@ const THEME = createTheme({
     MuiButton: {
       styleOverrides: {
         contained: {
-          backgroundColor: "#303c6c",
+          backgroundColor: "#f90000",
           color: "white",
         },
         outlined: {
-          borderColor: "#303c6c",
+          borderColor: "#f90000",
           border: "2px solid",
-          color: "#303c6c",
+          color: "#f90000",
         },
       },
     },
@@ -87,9 +87,9 @@ export default function App() {
               <Route path="userReg" element={<UserReg />} />
               <Route path="requestbet" element={<RequestBet />} />
               <Route path="leaderboard" element={<Leaderboard />} />
-              <Route path="dictionary" element={<Dictionary />} />
+              {/* <Route path="dictionary" element={<Dictionary />} /> */}
               <Route path="betfeed" element={<BetFeed />} />
-              <Route path="competition" element={<Competition />} />
+              {/* <Route path="competition" element={<Competition />} /> */}
               <Route path="user/:username" element={<UserProfile />} />
               <Route path="admin" element={<AdminHome />} />
               <Route path="admin/newbet" element={<NewBet />} />

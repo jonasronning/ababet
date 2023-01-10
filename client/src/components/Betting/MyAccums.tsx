@@ -1,4 +1,13 @@
-import { Button, Card, Chip, CircularProgress, Divider, Paper, Tab, Tabs } from "@mui/material";
+import {
+  Button,
+  Card,
+  Chip,
+  CircularProgress,
+  Divider,
+  Paper,
+  Tab,
+  Tabs,
+} from "@mui/material";
 import React, { useEffect } from "react";
 import { selectPath } from "../../redux/envSlice";
 import { useAppSelector } from "../../redux/hooks";
@@ -88,14 +97,14 @@ export default function MyAccums() {
   if (responseCode == undefined) {
     return (
       <>
-      <br />
-      <br />
-      <br />
+        <br />
+        <br />
+        <br />
         <CircularProgress />
       </>
     );
   }
-  
+
   if (responseCode !== 200) {
     return <NoAccess responseCode={responseCode} responseText={responseText} />;
   }
@@ -135,28 +144,28 @@ export default function MyAccums() {
                       width: 345,
                     }}
                   >
-                  <p
-                    style={{
-                      marginTop: 1,
-                      marginBottom: 1,
-                      color: "#828385",
-                    }}
-                  >
-                    <b>{"KupongID: " + accum.accum_id}</b> |{" "}
-                    {new Date(accum.placed_timestamp).getDate() +
-                      " " +
-                      MONTHS[new Date(accum.placed_timestamp).getMonth()] +
-                      " " +
-                      new Date(accum.placed_timestamp).getFullYear() +
-                      " " +
-                      ("0" + new Date(accum.placed_timestamp).getHours()).slice(
-                        -2
-                      ) +
-                      ":" +
-                      (
-                        "0" + new Date(accum.placed_timestamp).getMinutes()
-                      ).slice(-2)}
-                  </p>
+                    <p
+                      style={{
+                        marginTop: 1,
+                        marginBottom: 1,
+                        color: "#828385",
+                      }}
+                    >
+                      <b>{"KupongID: " + accum.accum_id}</b> |{" "}
+                      {new Date(accum.placed_timestamp).getDate() +
+                        " " +
+                        MONTHS[new Date(accum.placed_timestamp).getMonth()] +
+                        " " +
+                        new Date(accum.placed_timestamp).getFullYear() +
+                        " " +
+                        (
+                          "0" + new Date(accum.placed_timestamp).getHours()
+                        ).slice(-2) +
+                        ":" +
+                        (
+                          "0" + new Date(accum.placed_timestamp).getMinutes()
+                        ).slice(-2)}
+                    </p>
                     {accum.accumBets.map((bet) => {
                       let border = "";
                       let status_color = "white";
@@ -175,7 +184,7 @@ export default function MyAccums() {
                           <Paper
                             sx={{
                               border: border,
-                              padding:  1,
+                              padding: 1,
                               marginLeft: 2,
                               marginRight: 2,
                               marginTop: 1,
@@ -200,21 +209,21 @@ export default function MyAccums() {
                     })}
                     <Chip
                       sx={{
-                        backgroundColor: "#303c6c",
+                        backgroundColor: "#f90000",
                         color: "white",
                         marginRight: 1,
                       }}
                       label={"Innsats: " + accum.stake + "kr"}
                     ></Chip>
                     <Chip
-                      sx={{ backgroundColor: "#303c6c", color: "white" }}
+                      sx={{ backgroundColor: "#f90000", color: "white" }}
                       label={"Totalodds: " + accum.total_odds.toFixed(2)}
                     ></Chip>
                     <br />
                     <Chip
                       sx={{
                         marginTop: 1,
-                        backgroundColor: "#303c6c",
+                        backgroundColor: "#f90000",
                         color: "white",
                       }}
                       label={
