@@ -182,8 +182,7 @@ export default function Accumulator() {
                 sx={{
                   color: "#ffffff",
                   backgroundColor: "#3d4a58",
-                  mt: 2,
-                  mb: 2,
+         
                   ":hover": {
                     color: "#ffffff",
                     backgroundColor: "#636e72",
@@ -261,16 +260,15 @@ export default function Accumulator() {
                 ></Chip>
               </div>
               <Button
-                sx={{
+              sx={{
+                color: "#ffffff",
+                backgroundColor: "#3d4a58",
+            
+                ":hover": {
                   color: "#ffffff",
-                  backgroundColor: "#3d4a58",
-                  mt: 2,
-                  mb: 2,
-                  ":hover": {
-                    color: "#ffffff",
-                    backgroundColor: "#636e72",
-                  },
-                }}
+                  backgroundColor: "#636e72",
+                },
+              }}
                 disabled={balance < Number(stake) ? true : false}
                 variant="contained"
                 onClick={() => {
